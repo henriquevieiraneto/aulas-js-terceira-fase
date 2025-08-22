@@ -1,0 +1,74 @@
+{
+  "atividades": [
+    {
+      "id": 1,
+      "titulo": "Conhecendo uma API no Navegador",
+      "descricao": "Acesse a API ViaCEP e observe o formato JSON.",
+      "url": "https://viacep.com.br/ws/01001000/json/",
+      "pergunta": "Como isso pode ser usado em um sistema real?",
+      "resposta": "Pode ser usado para autocompletar endereços, validar dados de localização e melhorar a experiência do usuário."
+    },
+    {
+      "id": 2,
+      "titulo": "Consumindo API com fetch (JavaScript)",
+      "descricao": "Crie um arquivo index.html com código JavaScript para consumir a API ViaCEP usando fetch.",
+      "desafio": "Mostrar apenas logradouro, bairro, localidade e uf",
+      "campos_desejados": ["logradouro", "bairro", "localidade", "uf"]
+    },
+    {
+      "id": 3,
+      "titulo": "Consumindo API com curl (Terminal)",
+      "comandos": [
+        {
+          "tipo": "GET",
+          "descricao": "Consulta simples a um post",
+          "comando": "curl https://jsonplaceholder.typicode.com/posts/1"
+        },
+        {
+          "tipo": "POST",
+          "descricao": "Envio de dados simulando criação de post",
+          "comando": "curl -X POST https://jsonplaceholder.typicode.com/posts -H \"Content-type: application/json\" -d '{\"title\":\"Meu post\",\"body\":\"Conteúdo do post\",\"userId\":1}'"
+        }
+      ],
+      "pergunta": "Em quais situações o curl pode ser mais útil do que o fetch?",
+      "resposta": "Em ambientes sem navegador, scripts automatizados, testes rápidos no terminal e pipelines de integração contínua."
+    },
+    {
+      "id": 4,
+      "titulo": "Explorando o Postman",
+      "requisoes": [
+        {
+          "tipo": "GET",
+          "url": "https://viacep.com.br/ws/01001000/json/",
+          "descricao": "Consulta de endereço via CEP"
+        },
+        {
+          "tipo": "GET",
+          "url": "https://jsonplaceholder.typicode.com/posts/1",
+          "descricao": "Consulta de post simulado"
+        },
+        {
+          "tipo": "POST",
+          "url": "https://jsonplaceholder.typicode.com/posts",
+          "descricao": "Criação de post via Postman",
+          "body": {
+            "title": "Post via Postman",
+            "body": "Teste de integração",
+            "userId": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Miniaplicativo Final",
+      "descricao": "Desenvolver uma página que permita digitar um CEP, consultar a API do ViaCEP via fetch e mostrar logradouro, bairro, cidade e estado.",
+      "funcionalidades": [
+        "Campo para digitar o CEP",
+        "Consulta à API ViaCEP com fetch",
+        "Exibição de logradouro, bairro, cidade e estado",
+        "Documentação da requisição no Postman"
+      ]
+    }
+  ]
+}
